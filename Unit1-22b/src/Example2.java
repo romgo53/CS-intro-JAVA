@@ -13,7 +13,5 @@ public class Example2 {
         double present= (double)kids/group*100;
 //        System.out.println(first + " / " + second + " = " + (first+second));
         System.out.println("the kids are " + present + "% of the group");
-
-
     }
 }
