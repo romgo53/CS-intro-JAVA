@@ -14,5 +14,6 @@ public class Example2 {
 //        System.out.println(first + " / " + second + " = " + (first+second));
         System.out.println("the kids are " + present + "% of the group");
 
+
     }
 }
