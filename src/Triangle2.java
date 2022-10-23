@@ -3,7 +3,8 @@ import java.util.Scanner;
  * Triangle1
  * The Triangle2 class receives the lengths of the three sides of a triangle from the user and
  * TODO UPDATE THE DESCRIPTION
- * Written by: Rom Waidergoren,  23/10/2022
+ * Author: Rom Waidergoren
+ * Version: 23/10/2022
  */
 public class Triangle2 {
     public static void main(String[] args) {
