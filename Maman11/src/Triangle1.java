@@ -18,7 +18,7 @@ public class Triangle1 {
         int c = scan.nextInt();
 
         int perimeter = a + b + c;
-        // Implantation of Heron's formula to calculate the area of a triangle
+        // Implementing Heron's formula to calculate the area of a triangle
         double s = (double) perimeter / 2;
         double area = Math.sqrt(s * ((s - a) * (s - b) * (s - c)));
 
