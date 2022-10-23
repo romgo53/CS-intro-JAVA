@@ -18,14 +18,19 @@ public class Triangle2 {
         int x = scan.nextInt();
         int y = scan.nextInt();
         int z = scan.nextInt();
+
         // Checks if the triangle is valid
-        if (x + y > z && x + z > y && z + y > x){
-            if (x==y && y==z)
+        if (x + y > z && x + z > y && z + y > x) {
+            if (x == y && y == z)
                 System.out.println("The numbers: X, Y and Z represent an equilateral triangle");
-            else if(x==y || y==z || z==x)
-                System.out.println("The numbers: X, Y and Z represents a isosceles triangle");
+            else if (x == y || y == z || z == x)
+                System.out.println("The numbers: X, Y and Z represents an isosceles triangle");
+            // Checks if the triangle is right-angled by using the Pythagoras theorem
+            else if (Math.pow(x, 2) + Math.pow(y, 2) == Math.pow(z, 2) || Math.pow(x, 2) + Math.pow(z, 2) == Math.pow(y, 2) || Math.pow(z, 2) + Math.pow(y, 2) == Math.pow(z, 2))
+                System.out.println("The numbers: X, Y and Z represents a right-angle triangle");
+            else
+                System.out.println("The numbers: X, Y and Z represent a common triangle");
         } else
             System.out.println("The numbers: X, Y and Z cannot represent a triangle");
-
     }
 }
