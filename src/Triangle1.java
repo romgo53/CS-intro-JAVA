@@ -4,7 +4,9 @@ import java.util.Scanner;
  * Triangle1
  * The Triangle1 class receives the lengths of the three sides of a triangle from the user and
  * prints the perimeter and area of the triangle.
- * Written by: Rom Waidergoren,  22/10/2022
+ *
+ * Author: Rom Waidergoren
+ * Version: 22/10/2022
  */
 public class Triangle1 {
     public static void main (String [] args)

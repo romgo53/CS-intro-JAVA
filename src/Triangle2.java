@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /*
- * Triangle1
+ * Triangle2
  * The Triangle2 class receives tree lengths and checks whether these lengths can be a triangle
  * If so it will print the type of the triangle (equilateral, isosceles, right-angle or common)
  *
