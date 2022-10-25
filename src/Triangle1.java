@@ -25,7 +25,7 @@ public class Triangle1 {
         double s = (double) perimeter / 2;
         double area = Math.sqrt(s * ((s - a) * (s - b) * (s - c)));
 
-        System.out.println ("The length of the triangle sides are: " + a + "," + b + "," + c + ".");
+        System.out.println ("The length of the triangle sides are: " + a + ", " + b + ", " + c + ".");
         System.out.println ("The perimeter of the triangle is: " + perimeter);
         System.out.println ("The area of the triangle is: " + area);
     }
