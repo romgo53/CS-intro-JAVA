@@ -100,8 +100,8 @@ public class Car {
     }
 
     /**
-     * Generates a String that represent the Car's attributes.
-     * @return A String that represent the Car.
+     * Generates a String that represents the Car's attributes.
+     * @return A String that represents the Car.
      */
     public String toString() {
         return "id:" + _id + " type:" + _type + " brand:" + _brand + " gear:" + (_isManual ? MANUAL_GEAR : AUTOMATIC_GEAR);
