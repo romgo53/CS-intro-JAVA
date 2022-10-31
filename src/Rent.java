@@ -78,6 +78,11 @@ public class Rent {
         return (DAYS/7)*WEEKLY_PRICE + (DAYS%7)*DAILY_PRICE;
     }
     // TODO: add upgrade, overlap and toString methods to the Rent class, also after you finish get rid of the main method
+    public void upgrade(Car newCar){
+        if (newCar.better(_car))
+            _car = new Car(newCar);
+
+    }
     public static void main(String[] args) {
         Car car = new Car(1234567, 'A', "Toyota", true);
         Date pickDate = new Date(1, 1, 2020);
