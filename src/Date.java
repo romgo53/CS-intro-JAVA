@@ -10,9 +10,14 @@ public class Date {
     private int _month;
     private int _year;
 
-    private final int DEFAULT_DAY = 1;
-    private final int DEFAULT_MONTH = 1;
-    private final int DEFAULT_YEAR = 2000;
+    private static final int DEFAULT_DAY = 1;
+    private static final int DEFAULT_MONTH = 1;
+    private static final int DEFAULT_YEAR = 2000;
+    private static final int FIRST_DAY_OF_MONTH = 1;
+    private static final int FIRST_MONTH_OF_YEAR = 1;
+    private static final int LAST_MONTH_OF_YEAR = 12;
+    private static final int MIN_YEAR = 1000;
+    private static final int MAX_YEAR = 9999;
 
     /**
      * Initialize the Date object with the given parameters.
@@ -35,9 +40,9 @@ public class Date {
     }
 
     /**
-     * Initialize the Date object from other Date object.
+     * Copy constructor
      *
-     * @param other: The other Date object.
+     * @param other: The Date object that will be copied.
      */
     public Date(Date other) {
         _day = other._day;
@@ -187,11 +192,6 @@ public class Date {
      * @return True if the date is valid, false otherwise.
      */
     private static boolean isValidDate(int day, int month, int year) {
-        final int FIRST_DAY_OF_MONTH = 1;
-        final int FIRST_MONTH_OF_YEAR = 1;
-        final int LAST_MONTH_OF_YEAR = 12;
-        final int MIN_YEAR = 1000;
-        final int MAX_YEAR = 9999;
         if (!(month >= FIRST_MONTH_OF_YEAR && month <= LAST_MONTH_OF_YEAR))
             return false;
         if (!(year >= MIN_YEAR && year <= MAX_YEAR))

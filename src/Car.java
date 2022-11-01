@@ -9,10 +9,10 @@ public class Car {
     private char _type;
     private String _brand;
     private boolean _isManual;
-    private final int DEFAULT_ID = 9999999;
-    private final char DEFAULT_TYPE = 'A';
-    private final String AUTOMATIC_GEAR = "auto";
-    private final String MANUAL_GEAR = "manual";
+    private static final int DEFAULT_ID = 9999999;
+    private static final char DEFAULT_TYPE = 'A';
+    private static final String AUTOMATIC_GEAR = "auto";
+    private static final String MANUAL_GEAR = "manual";
 
     /**
      * Initialize the car object with the given parameters.
@@ -35,14 +35,14 @@ public class Car {
     }
 
     /**
-     * Initialize the car from other Car object.
-     * @param other:       The other Car object.
+     * Copy constructor.
+     * @param other:       The Car object that will be copied
      */
     public Car(Car other) {
-        _id = other._id;
-        _type = other._type;
-        _brand = other._brand;
-        _isManual = other._isManual;
+        _id = other.getId();
+        _type = other.getType();
+        _brand = other.getBrand();
+        _isManual = other.isManual();
     }
 
     /**
@@ -95,7 +95,7 @@ public class Car {
         _brand = brand;
     }
 
-    public void setManual(boolean isManual) {
+    public void setIsManual(boolean isManual) {
         _isManual = isManual;
     }
 
@@ -124,9 +124,9 @@ public class Car {
      * @return True if this Car is better than the other Car object, false otherwise.
      */
     public boolean better(Car other) {
-        if (_type > other._type)
+        if (_type > other.getType())
             return true;
-        return _isManual && !other._isManual;
+        return _type == other.getType() && _isManual && !other.isManual(); //If the types are equal, check if this car is auto and the other is manual.
     }
 
     /**
