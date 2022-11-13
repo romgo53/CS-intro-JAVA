@@ -1,5 +1,6 @@
 /**
  * Represents a car in a car fleet
+ *
  * @author Rom Amikam Waidergoren
  * @version 30.10.2022
  */
@@ -16,6 +17,7 @@ public class Car {
 
     /**
      * Initialize the car object with the given parameters.
+     *
      * @param id:       The car's id.
      * @param type:     The car's type [A,B,C,D].
      * @param brand:    The car's brand.
@@ -36,7 +38,8 @@ public class Car {
 
     /**
      * Copy constructor.
-     * @param other:       The Car object that will be copied
+     *
+     * @param other: The Car object that will be copied
      */
     public Car(Car other) {
         _id = other.getId();
@@ -47,6 +50,7 @@ public class Car {
 
     /**
      * Validate that the given type is one of the 4 car types (A,B,C,D).
+     *
      * @param type: The car's type.
      * @return True if the type is valid, false otherwise.
      */
@@ -54,53 +58,88 @@ public class Car {
         return type == 'A' || type == 'B' || type == 'C' || type == 'D';
     }
 
+
     /**
-     * Validate that the given id is a 7-digit number.
-     * @param id: The car's id.
-     * @return True if the id is valid, false otherwise.
+     * Make sure that the given id is a 7-digit number.
+     *
+     * @param id: the id to check.
+     * @return true if the id is valid, false otherwise.
      */
     private static boolean isValidId(int id) {
         return id >= 1000000 && id < 9999999;
     }
 
+    /**
+     * @return The car's id.
+     */
     public int getId() {
         return _id;
     }
 
+    /**
+     * @return The car's type.
+     */
     public char getType() {
         return _type;
     }
 
+    /**
+     * @return The car's brand.
+     */
     public String getBrand() {
         return _brand;
     }
 
+    /**
+     * @return True if the car's gear is manual, false otherwise.
+     */
     public boolean isManual() {
         return _isManual;
     }
 
+    /**
+     * set the id of the car.
+     *
+     * @param id: the new car id.
+     */
     public void setId(int id) {
         if (isValidId(id)) {
             _id = id;
         }
     }
 
+    /**
+     * set the type of the car.
+     *
+     * @param type: the new car type.
+     */
     public void setType(char type) {
         if (isValidType(type)) {
             _type = type;
         }
     }
 
+    /**
+     * set the brand of the car.
+     *
+     * @param brand: the new car brand.
+     */
     public void setBrand(String brand) {
         _brand = brand;
     }
 
+    /**
+     * set the gear type of the car.
+     *
+     * @param isManual: true for manual false for automatic gear.
+     */
     public void setIsManual(boolean isManual) {
         _isManual = isManual;
     }
 
     /**
      * Generates a String that represents the Car's attributes.
+     *
      * @return A String that represents the Car.
      */
     public String toString() {
@@ -109,6 +148,7 @@ public class Car {
 
     /**
      * Checks if the given Car object is equal to this Car object.
+     *
      * @param other: The other Car object.
      * @return True if the given Car object is equal to this Car object, false otherwise.
      */
@@ -120,6 +160,7 @@ public class Car {
      * Checks if this Car object is better that the given one.
      * Compares the types while A is the worst and D is the best.
      * If the types are equal, it checks if this car is auto and the other is manual.
+     *
      * @param other: The other Car object.
      * @return True if this Car is better than the other Car object, false otherwise.
      */
@@ -130,8 +171,9 @@ public class Car {
     }
 
     /**
-     *Checks if this car is worse than the other Car.
+     * Checks if this car is worse than the other Car.
      * Same as the `better` method but this time it checks if the other car is better.
+     *
      * @param other: The other Car object.
      * @return True if this Car is better than the other Car object, false otherwise.
      */

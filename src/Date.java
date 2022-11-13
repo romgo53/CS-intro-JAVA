@@ -50,28 +50,52 @@ public class Date {
         _year = other._year;
     }
 
+    /**
+     * @return the date's day
+     */
     public int getDay() {
         return _day;
     }
 
+    /**
+     * @return the date's month
+     */
     public int getMonth() {
         return _month;
     }
 
+    /**
+     * @return the date's year
+     */
     public int getYear() {
         return _year;
     }
 
+    /**
+     * set the date's day, validate that the given day is valid
+     * if not the day will not be changed.
+     * @param day the new day to set.
+     */
     public void setDay(int day) {
         if (isValidDate(day, _month, _year))
             _day = day;
     }
 
+    /**
+     * set the date's month, validate that the given month is valid
+     * if not, the month will not be change.
+     * @param month the new month to set.
+     */
     public void setMonth(int month) {
         if (isValidDate(_day, month, _year))
             _month = month;
     }
 
+    /**
+     * set the date's year, validate that the given year is valid
+     * if not valid, the year won't change.
+     * @param year the new year to set.
+     */
     public void setYear(int year) {
         if (isValidDate(_day, _month, year))
             _year = year;

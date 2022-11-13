@@ -48,36 +48,70 @@ public class Rent {
         _returnDate = other._returnDate;
     }
 
+    /**
+     * @return the renter's name
+     */
     public String getName() {
         return _name;
     }
 
+    /**
+     * @return the car object
+     */
     public Car getCar() {
         return _car;
     }
 
+    /**
+     * @return the pick date
+     */
     public Date getPickDate() {
         return _pickDate;
     }
 
+    /**
+     * @return the return date
+     */
     public Date getReturnDate() {
         return _returnDate;
     }
 
+    /**
+     * set the renter's name
+     *
+     * @param name the renter's new name
+     */
     public void setName(String name) {
         _name = name;
     }
 
+    /**
+     * set the car object
+     *
+     * @param car the new car object
+     */
     public void setCar(Car car) {
         _car = car;
     }
 
+    /**
+     * set the pick date, validates that the pick date is before the return date
+     * if not, do nothing
+     *
+     * @param pickDate the new pick date
+     */
     public void setPickDate(Date pickDate) {
         if (pickDate.before(_returnDate)) {
             _pickDate = pickDate;
         }
     }
 
+    /**
+     * set the return date, validates that the return date is after the pick date
+     * if not, do nothing
+     *
+     * @param returnDate the new return date
+     */
     public void setReturnDate(Date returnDate) {
         if (returnDate.after(_pickDate)) {
             _returnDate = returnDate;
